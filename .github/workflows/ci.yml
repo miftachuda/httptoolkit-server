@@ -19,7 +19,7 @@ jobs:
           node-version: 16.18.0
 
       - run: npm install -g npm@^8
-      - run: npm install
+      - run: npm install --save --save-exact
 
       - name: Set up JDK 11 for Java testing
         uses: actions/setup-java@v1
