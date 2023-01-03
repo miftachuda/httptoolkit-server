@@ -27,7 +27,9 @@ export const ALLOWED_ORIGINS = IS_PROD_BUILD
     ];
 
 export const MOCKTTP_ALLOWED_ORIGINS = [
-    ...ALLOWED_ORIGINS,
+    /^https?:\/\/localhost(:\d+)?$/,
+    /^http:\/\/local\.httptoolkit\.tech(:\d+)?$/,
+    /^https:\/\/app\.httptoolkit\.tech$/,
     // The Chromium webextension is allowed to make requests from the
     // browser directly into the Mockttp admin API (but not into our API server).
     'chrome-extension://oeehdgfohghfelggpifolochpnkdmpog'
