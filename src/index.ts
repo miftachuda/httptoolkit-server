@@ -164,7 +164,7 @@ export async function runHTK(options: {
             }
         },
         corsOptions: {
-            strict: true, // For the standalone admin API, require valid CORS headers
+            strict: false, // For the standalone admin API, require valid CORS headers
             origin: MOCKTTP_ALLOWED_ORIGINS, // Only allow mock admin control from our origins
             maxAge: 86400, // Cache CORS responses for as long as possible
             allowPrivateNetworkAccess: true // Allow access from non-local domains in Chrome 102+

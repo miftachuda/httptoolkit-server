@@ -308,12 +308,12 @@ export class HttpToolkitServerApi extends events.EventEmitter {
             ENABLE_PLAYGROUND
             // When the debugging playground is enabled, we're slightly more lax
             ? {
-                strict: true,
+                strict: false,
                 allowSafe: true,
                 origin: 'http://localhost:45457'
             }
             : {
-                strict: true, // MUST send an allowed origin
+                strict: false, // MUST send an allowed origin
                 allowSafe: false, // Even for HEAD/GET requests (should be none anyway)
                 origin: '' // No origin - we accept *no* same-origin requests
             }

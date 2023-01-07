@@ -34,7 +34,7 @@ export class CertCheckServer {
     private certCheckedSuccessfully = getDeferred<boolean>();
 
     async start(targetUrl: string) {
-        this.server = getLocal({ https: this.config.https, cors: true });
+        this.server = getLocal({ https: this.config.https, cors: false });
         await this.server.start(EPHEMERAL_PORT_RANGE);
 
         await Promise.all([
